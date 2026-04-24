@@ -1,8 +1,8 @@
+import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
-import fs from 'node:fs/promises';
-import type { ClientAdapter } from './base.js';
 import type { CanonicalConfig } from '../types.js';
+import type { ClientAdapter } from './base.js';
 
 function getWindsurfConfigPath() {
   return path.join(os.homedir(), '.codeium', 'windsurf', 'mcp.json');

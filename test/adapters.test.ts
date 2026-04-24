@@ -1,7 +1,7 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
+import { claudeCodeAdapter } from '../src/clients/claude-code.js';
 import { claudeDesktopAdapter } from '../src/clients/claude-desktop.js';
 import { cursorAdapter } from '../src/clients/cursor.js';
-import { claudeCodeAdapter } from '../src/clients/claude-code.js';
 import { windsurfAdapter } from '../src/clients/windsurf.js';
 import type { CanonicalConfig } from '../src/types.js';
 
@@ -11,14 +11,14 @@ const mockCanonical: CanonicalConfig = {
       command: 'npx',
       args: ['-y', '@test/server'],
       env: { API_KEY: 'test' },
-      enabledFor: ['claude-desktop', 'cursor']
+      enabledFor: ['claude-desktop', 'cursor'],
     },
     'global-server': {
       command: 'python',
       args: ['-m', 'server'],
-      enabledFor: ['all']
-    }
-  }
+      enabledFor: ['all'],
+    },
+  },
 };
 
 describe('Client Adapters Schema Conversion', () => {
@@ -92,7 +92,7 @@ describe('Client Adapters Schema Conversion', () => {
       }
     `);
   });
-  
+
   it('windsurf canonicalToSchema matches snapshot', () => {
     const result = windsurfAdapter.canonicalToSchema(mockCanonical, {});
     expect(result).toMatchInlineSnapshot(`
