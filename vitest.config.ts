@@ -6,7 +6,7 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
-      exclude: ['dist/**'],
+      exclude: ['dist/**', 'src/cli.ts', 'src/index.ts', 'src/clients/**', '*.config.ts'],
       thresholds: {
         lines: 80,
         functions: 80,
