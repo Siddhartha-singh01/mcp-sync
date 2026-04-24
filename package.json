@@ -1,5 +1,5 @@
 {
-  "name": "mcp-sync",
+  "name": "@siddharthasingh/mcp-sync",
   "version": "0.1.0-alpha.0",
   "description": "One CLI to manage MCP servers across every AI client you use.",
   "type": "module",
