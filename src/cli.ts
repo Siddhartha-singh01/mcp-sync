@@ -1,14 +1,14 @@
 #!/usr/bin/env node
-import { Command } from 'commander';
-import pc from 'picocolors';
-import ora from 'ora';
 import os from 'node:os';
 import path from 'node:path';
+import { Command } from 'commander';
+import ora from 'ora';
+import pc from 'picocolors';
+import { ALL_ADAPTERS, detectInstalledClients } from './clients/index.js';
 import {
   readCanonicalConfig,
   writeCanonicalConfig,
 } from './portable-format.js';
-import { detectInstalledClients, ALL_ADAPTERS } from './clients/index.js';
 
 const program = new Command();
 const CANONICAL_PATH = path.join(os.homedir(), '.mcp-sync.yaml');

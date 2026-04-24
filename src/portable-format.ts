@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import yaml from 'yaml';
-import { CanonicalConfigSchema, type CanonicalConfig } from './types.js';
+import { type CanonicalConfig, CanonicalConfigSchema } from './types.js';
 
 export async function readCanonicalConfig(
   path: string,

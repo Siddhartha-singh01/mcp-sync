@@ -1,6 +1,6 @@
+import { claudeCodeAdapter } from './claude-code.js';
 import { claudeDesktopAdapter } from './claude-desktop.js';
 import { cursorAdapter } from './cursor.js';
-import { claudeCodeAdapter } from './claude-code.js';
 import { windsurfAdapter } from './windsurf.js';
 
 export const ALL_ADAPTERS = [
